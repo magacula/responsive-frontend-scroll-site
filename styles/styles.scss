@@ -1,0 +1,95 @@
+/* declaring sass variables */
+$primary-color: #131313;
+$primary-gradient-color: #f12e5f;
+$accent-gradient-color: #ecdf95;
+
+/* styles reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Kumbh Sans", sans-serif;
+  scroll-behavior: smooth; /* allows for smooth scrolling effect */
+}
+
+.navbar {
+  background: $primary-color;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* a really large number so navbar will always be above all elements */
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+#navbar_logo {
+  background-color: #ff8177;
+  background-image: linear-gradient(
+    to top,
+    $primary-gradient-color 0%,
+    $accent-gradient-color 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.navbar__menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.navbar__item {
+  height: 80px;
+}
+
+.navbar__links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 125px;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navbar__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  background: #1a2a6c; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #fdbb2d,
+    #b21f1f,
+    #1a2a6c
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #fdbb2d,
+    #b21f1f,
+    #1a2a6c
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
