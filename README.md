@@ -1,3 +1,1 @@
-# Responsive Landing Page
-
-A landing page site created with HTML, CSS / SASS, and JavaScript.
+A basic responsive site created with HTML, CSS / SASS, and JavaScript.
