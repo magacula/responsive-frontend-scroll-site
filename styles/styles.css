@@ -44,7 +44,7 @@
   padding: 0 50px;
 }
 
-#navbar_logo {
+#navbar__logo {
   background-color: #ff8177;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f12e5f), to(#ecdf95));
   background-image: linear-gradient(to top, #f12e5f 0%, #ecdf95 100%);
@@ -169,13 +169,14 @@
     margin: 0;
     width: 100%;
     position: absolute;
+    top: -1000px;
+    /* Drop down affect. first hides menu*/
     opacity: 1;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     z-index: -1;
-    background: #131313;
   }
-  /* styles the active class of navbar menu */
+  /* styles the active class of navbar menu (shows navbar menu) */
   .navbar__menu.active {
     background-color: #131313;
     top: 100%;
@@ -186,9 +187,10 @@
     height: 60vh;
     font-size: 1.6rem;
   }
-  #navbar_logo {
+  #navbar__logo {
     padding-left: 25px;
   }
+  /* Below we create the hamburger menu */
   .navbar__toggle .bar {
     width: 25px;
     height: 3px;
@@ -233,5 +235,16 @@
     cursor: pointer;
   }
   /* hamburger menu animation*/
+  #mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  #mobile-menu.is-active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+            transform: translateY(8px) rotate(45deg);
+  }
+  #mobile-menu.is-active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+            transform: translateY(-8px) rotate(-45deg);
+  }
 }
 /*# sourceMappingURL=styles.css.map */
