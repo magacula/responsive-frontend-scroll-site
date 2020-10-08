@@ -637,10 +637,10 @@
 }
 
 .services__card:nth-child(1) {
-  background: #833ab4;
+  background: #40e0d0;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(-225deg, #fcb045 0%, #fd1d1d 35%, #833ab4 85%);
+  background: linear-gradient(-225deg, #ff0080 0%, #ff8c00 35%, #40e0d0 85%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -653,10 +653,10 @@
 }
 
 .services__card:nth-child(3) {
-  background: #40e0d0;
+  background: #833ab4;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(-225deg, #ff0080 0%, #ff8c00 35%, #40e0d0 85%);
+  background: linear-gradient(-225deg, #fcb045 0%, #fd1d1d 35%, #833ab4 85%);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
