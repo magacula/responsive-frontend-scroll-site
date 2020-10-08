@@ -456,8 +456,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
-  background-image: -webkit-gradient(linear, left top, right top, from(#00dbde), to(#fc00ff));
-  background-image: linear-gradient(to right, #00dbde, #fc00ff 100%);
+  background: #12c2e9;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#f64f59), color-stop(#c471ed), to(#12c2e9));
+  background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .fa-layer-group,
