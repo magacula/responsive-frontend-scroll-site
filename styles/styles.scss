@@ -18,17 +18,51 @@ $nav-link-hover-color: #fdbb2d;
   position: sticky;
   top: 0;
   z-index: 999; /* a really large number so navbar will always be above all elements */
-}
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  height: 80px;
-  margin: 0 auto;
-  padding: 0 50px;
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 50px;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+  }
+
+  &__item {
+    height: 80px;
+  }
+
+  &__links {
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 100%;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  &__links:hover {
+    color: $nav-link-hover-color;
+    transition: all 0.3s ease; /* For smooth color transition effect needs to be in original selector */
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1rem;
+    width: 100%;
+  }
 }
 
 #navbar__logo {
@@ -48,35 +82,6 @@ $nav-link-hover-color: #fdbb2d;
   cursor: pointer;
   text-decoration: none;
   font-size: 2rem;
-}
-
-.navbar__menu {
-  display: flex;
-  align-items: center;
-  list-style: none;
-}
-
-.navbar__item {
-  height: 80px;
-}
-
-.navbar__links {
-  color: $secondary-color;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 125px;
-  height: 100%;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.navbar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 1rem;
-  width: 100%;
 }
 
 .button {
@@ -107,11 +112,6 @@ $nav-link-hover-color: #fdbb2d;
   color: $secondary-color;
 }
 
-.navbar__links:hover {
-  color: $nav-link-hover-color;
-  transition: all 0.3s ease; /* For smooth color transition effect needs to be in original selector */
-}
-
 @media screen and (max-width: 960px) {
   .navbar-container {
     display: flex;
@@ -123,7 +123,7 @@ $nav-link-hover-color: #fdbb2d;
     padding: 0;
   }
 
-  /* For mobile phone navbar */
+  /** For mobile phone navbar **/
   .navbar__menu {
     display: grid;
     grid-template-columns: auto;
@@ -138,7 +138,7 @@ $nav-link-hover-color: #fdbb2d;
 
   /* styles the active class of navbar menu (shows navbar menu) */
   .navbar__menu.active {
-    background-color: $primary-color;
+    background-color: rgba(0, 0, 0, 0.918);
     top: 100%;
     opacity: 1;
     transition: all 0.5s ease;
@@ -216,63 +216,65 @@ $nav-link-hover-color: #fdbb2d;
   background: #000000;
   background: linear-gradient(to right, #161616, #000000);
   padding: 200px 0;
-}
 
-.hero__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 30px;
-  height: 90%;
-  text-align: center;
-}
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    height: 90%;
+    text-align: center;
+  }
 
-.hero__heading {
-  font-size: 100px;
-  margin-bottom: 24px;
-  color: $secondary-color;
-}
+  &__heading {
+    font-size: 100px;
+    margin-bottom: 24px;
+    color: $secondary-color;
+  }
 
-.hero__heading span {
-  background: #c0392b; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #8e44ad,
-    #c0392b
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #8e44ad,
-    #c0392b
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-}
+  &__heading {
+    span {
+      background: #c0392b; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #8e44ad,
+        #c0392b
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #8e44ad,
+        #c0392b
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+  }
 
-.hero__description {
-  font-size: 48px;
-  background: #da4453; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #89216b,
-    #da4453
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #89216b,
-    #da4453
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
+  &__description {
+    font-size: 48px;
+    background: #da4453; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #89216b,
+      #da4453
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #89216b,
+      #da4453
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
 }
 
 .highlight {
@@ -286,5 +288,235 @@ $nav-link-hover-color: #fdbb2d;
 
   .hero__description {
     font-size: 40px;
+  }
+}
+
+/** About Section **/
+.main {
+  background-color: $primary-color;
+  padding: 10rem 0;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 50px;
+    height: 90%;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+  }
+
+  &__content {
+    color: $secondary-color;
+    h1 {
+      font-size: 2rem;
+      width: 100%;
+      background-color: #ff8177;
+      background-image: linear-gradient(
+        to top,
+        $primary-gradient-color 0%,
+        $accent-gradient-color 100%
+      );
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      font-size: 4rem;
+      background: #da4453; /* fallback for old browsers */
+      background: -webkit-linear-gradient(
+        to right,
+        #89216b,
+        #da4453
+      ); /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(
+        to right,
+        #89216b,
+        #da4453
+      ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      background-size: 100%;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -moz-text-fill-color: transparent;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
+
+  &__btn {
+    font-size: 1.8rem;
+    background: $primaryBtn; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fdbb2d,
+      #b21f1f,
+      #1a2a6c
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #fdbb2d,
+      #b21f1f,
+      #1a2a6c
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 20px 60px;
+    border: none;
+    border-radius: 4px;
+    color: $secondary-color;
+    margin-top: 2rem;
+    position: relative;
+    transition: all 0.35s;
+    outline: none;
+
+    a {
+      position: relative;
+      z-index: 2;
+      color: $secondary-color;
+      text-decoration: none;
+    }
+  }
+
+  /* Slide over animation using hover and after */
+  &__btn:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: $primary-gradient-color;
+    transition: all 0.35s;
+    border-radius: 4px;
+  }
+
+  &__btn:hover {
+    color: $secondary-color;
+  }
+
+  &__btn:hover:after {
+    width: 100%;
+  }
+
+  &__img--container {
+    text-align: center;
+  }
+
+  &__img--card {
+    margin: 10px;
+    height: 500px;
+    width: 500px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $secondary-color;
+    background-image: linear-gradient(to right, #00dbde, #fc00ff 100%);
+  }
+}
+
+.fa-layer-group,
+.fa-users {
+  font-size: 14rem;
+}
+
+#card-2 {
+  background: #da4453; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #89216b,
+    #da4453
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* Mobile responsive for About Section */
+@media screen and (max-width: 1100px) {
+  .main__container {
+    color: $secondary-color;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 90%;
+  }
+
+  .main__img--container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__img--card {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main__content {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-size: 2.5rem;
+      margin-top: 2rem;
+    }
+
+    h2 {
+      font-size: 3rem;
+    }
+
+    p {
+      margin-top: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+/* For smaller mobile screens */
+@media screen and (max-width: 480px) {
+  .main__img--card {
+    width: 250px;
+    height: 250px;
+  }
+
+  .fa-users,
+  .fa-layer-group {
+    font-size: 4rem;
+  }
+
+  .main__content {
+    h1 {
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+  }
+
+  .main__btn {
+    padding: 12px;
+    margin: 2.5rem 0;
   }
 }
