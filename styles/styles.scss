@@ -1,3 +1,5 @@
+@import "config";
+
 /* declaring sass variables */
 $primary-color: #131313;
 $primary-gradient-color: #f12e5f;
@@ -5,15 +7,6 @@ $accent-gradient-color: #ecdf95;
 $primaryBtn: #1a2a6c;
 $nav-link-hover-color: #fdbb2d;
 $nav-link-primary-color: #fff;
-
-/* styles reset */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "Kumbh Sans", sans-serif;
-  scroll-behavior: smooth; /* allows for smooth scrolling effect */
-}
 
 .navbar {
   background: $primary-color;
@@ -65,8 +58,7 @@ $nav-link-primary-color: #fff;
 .navbar__item {
   height: 80px;
 }
-
-.navbar__links {
+2 .navbar__links {
   color: $nav-link-primary-color;
   display: flex;
   align-items: center;

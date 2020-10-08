@@ -1,4 +1,3 @@
-/* declaring sass variables */
 /* styles reset */
 * {
   -webkit-box-sizing: border-box;
@@ -10,6 +9,7 @@
   /* allows for smooth scrolling effect */
 }
 
+/* declaring sass variables */
 .navbar {
   background: #131313;
   height: 80px;
@@ -78,7 +78,7 @@
   height: 80px;
 }
 
-.navbar__links {
+2 .navbar__links {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
