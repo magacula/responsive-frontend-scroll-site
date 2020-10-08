@@ -3,6 +3,7 @@
 /* declaring sass variables */
 $primary-color: #131313;
 $secondary-color: #fff;
+$gradient-background-color: #ff8177;
 $primary-gradient-color: #f12e5f;
 $accent-gradient-color: #ecdf95;
 $primaryBtn: #1a2a6c;
@@ -66,7 +67,7 @@ $nav-link-hover-color: #fdbb2d;
 }
 
 #navbar__logo {
-  background-color: #ff8177;
+  background-color: $gradient-background-color;
   background-image: linear-gradient(
     to top,
     $primary-gradient-color 0%,
@@ -211,7 +212,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 }
 
-/** Hero Section **/
+/** Hero Style Section **/
 .hero {
   background: #000000;
   background: linear-gradient(to right, #161616, #000000);
@@ -291,7 +292,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 }
 
-/** About Section **/
+/** About Style Section **/
 .main {
   background-color: $primary-color;
   padding: 10rem 0;
@@ -313,7 +314,7 @@ $nav-link-hover-color: #fdbb2d;
     h1 {
       font-size: 2rem;
       width: 100%;
-      background-color: #ff8177;
+      background-color: $gradient-background-color;
       background-image: linear-gradient(
         to top,
         $primary-gradient-color 0%,
@@ -530,5 +531,162 @@ $nav-link-hover-color: #fdbb2d;
   .main__btn {
     padding: 12px;
     margin: 2.5rem 0;
+  }
+}
+
+/** Services Style Section **/
+
+.services {
+  background: #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+
+  h1 {
+    background-color: $gradient-background-color;
+    background-image: linear-gradient(
+      to top,
+      $primary-gradient-color 0%,
+      $accent-gradient-color 100%
+    );
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    margin-bottom: 5rem;
+    font-size: 2.5rem;
+  }
+}
+
+.services__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns */
+  grid-template-rows: 1fr;
+}
+
+.services__card {
+  margin: 10px;
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $secondary-color;
+  background-image: $primary-color;
+  transition: 0.3s ease-in;
+
+  &:hover {
+    transform: scale(1.075);
+    transition: 0.285s ease-in;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 20px;
+  }
+
+  &:nth-child(1) {
+    background: #833ab4; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #fcb045,
+      #fd1d1d,
+      #833ab4
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      -225deg,
+      #fcb045 0%,
+      #fd1d1d 35%,
+      #833ab4 85%
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &:nth-child(2) {
+    background: #77a1d3; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #e684ae,
+      #79cbca,
+      #77a1d3
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      -225deg,
+      #e684ae 18%,
+      #79cbca 64%,
+      #77a1d3 100%
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &:nth-child(3) {
+    background: #40e0d0; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #ff0080,
+      #ff8c00,
+      #40e0d0
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      -225deg,
+      #ff0080 0%,
+      #ff8c00 35%,
+      #40e0d0 85%
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  &:nth-child(4) {
+    background: #feac5e; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #4bc0c8,
+      #c779d0,
+      #feac5e
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      -225deg,
+      #4bc0c8 0%,
+      #c779d0 35%,
+      #feac5e 85%
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+}
+
+.services__btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+
+  button {
+    color: $secondary-color;
+    padding: 14px 24px;
+    border-radius: 4px;
+    background: $primary-color;
+    font-size: 1rem;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .services__wrapper {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__wrapper {
+    grid-template-columns: 1fr;
   }
 }

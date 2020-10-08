@@ -249,7 +249,7 @@
   }
 }
 
-/** Hero Section **/
+/** Hero Style Section **/
 .hero {
   background: #000000;
   background: -webkit-gradient(linear, left top, right top, from(#161616), to(#000000));
@@ -326,7 +326,7 @@
   }
 }
 
-/** About Section **/
+/** About Style Section **/
 .main {
   background-color: #131313;
   padding: 10rem 0;
@@ -551,6 +551,156 @@
   .main__btn {
     padding: 12px;
     margin: 2.5rem 0;
+  }
+}
+
+/** Services Style Section **/
+.services {
+  background: #000000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  padding: 10rem 0;
+}
+
+.services h1 {
+  background-color: #ff8177;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f12e5f), to(#ecdf95));
+  background-image: linear-gradient(to top, #f12e5f 0%, #ecdf95 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  margin-bottom: 5rem;
+  font-size: 2.5rem;
+}
+
+.services__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* 4 columns */
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+}
+
+.services__card {
+  margin: 10px;
+  height: 425px;
+  width: 300px;
+  border-radius: 4px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+  background-image: #131313;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+}
+
+.services__card:hover {
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
+  -webkit-transition: 0.285s ease-in;
+  transition: 0.285s ease-in;
+  cursor: pointer;
+}
+
+.services__card h2 {
+  text-align: center;
+}
+
+.services__card p {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+.services__card:nth-child(1) {
+  background: #833ab4;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-225deg, #fcb045 0%, #fd1d1d 35%, #833ab4 85%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services__card:nth-child(2) {
+  background: #77a1d3;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-225deg, #e684ae 18%, #79cbca 64%, #77a1d3 100%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services__card:nth-child(3) {
+  background: #40e0d0;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-225deg, #ff0080 0%, #ff8c00 35%, #40e0d0 85%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services__card:nth-child(4) {
+  background: #feac5e;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(-225deg, #4bc0c8 0%, #c779d0 35%, #feac5e 85%);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.services__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 16px;
+}
+
+.services__btn button {
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 4px;
+  background: #131313;
+  font-size: 1rem;
+}
+
+.services__btn button:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1300px) {
+  .services__wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .services__wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=styles.css.map */
