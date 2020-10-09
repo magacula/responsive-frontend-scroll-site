@@ -98,7 +98,8 @@
   width: 100%;
 }
 
-#navbar__logo {
+#navbar__logo,
+#footer__logo {
   background-color: #ff8177;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f12e5f), to(#ecdf95));
   background-image: linear-gradient(to top, #f12e5f 0%, #ecdf95 100%);
