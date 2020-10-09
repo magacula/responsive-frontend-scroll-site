@@ -527,6 +527,17 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .main__img--card {
+    width: 250px;
+    height: 250px;
+  }
+  .fa-users,
+  .fa-layer-group {
+    font-size: 4rem;
+  }
+}
+
 /* For smaller mobile screens */
 @media screen and (max-width: 480px) {
   .main__img--card {
