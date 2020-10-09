@@ -1,1 +1,1 @@
-A basic responsive site incorporating JavaScript smooth scroll created with HTML, CSS / SASS, and JavaScript.
+A basic responsive website incorporating JavaScript smooth scroll and a highlight menu effect. Created with HTML, CSS / SASS, and JavaScript.
