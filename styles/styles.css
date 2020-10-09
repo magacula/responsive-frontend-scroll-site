@@ -98,8 +98,7 @@
   width: 100%;
 }
 
-#navbar__logo,
-#footer__logo {
+#navbar__logo {
   background-color: #ff8177;
   background-image: -webkit-gradient(linear, left bottom, left top, from(#f12e5f), to(#ecdf95));
   background-image: linear-gradient(to top, #f12e5f 0%, #ecdf95 100%);
@@ -725,7 +724,13 @@
 }
 
 #footer__logo {
-  color: #fff;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#f12e5f), to(#ecdf95));
+  background-image: linear-gradient(to top, #f12e5f 0%, #ecdf95 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

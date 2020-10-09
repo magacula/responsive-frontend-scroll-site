@@ -66,8 +66,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 }
 
-#navbar__logo,
-#footer__logo {
+#navbar__logo {
   background-color: $gradient-background-color;
   background-image: linear-gradient(
     to top,
@@ -700,7 +699,16 @@ $nav-link-hover-color: #fdbb2d;
   align-items: center;
 }
 #footer__logo {
-  color: $secondary-color;
+  background-image: linear-gradient(
+    to top,
+    $primary-gradient-color 0%,
+    $accent-gradient-color 100%
+  );
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
   display: flex;
   flex-direction: column;
   cursor: pointer;
