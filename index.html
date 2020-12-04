@@ -16,7 +16,11 @@
     <!-- Navbar section -->
     <nav class="navbar">
       <div class="navbar-container">
-        <a href="#home" id="navbar__logo">COLORS</a>
+        <div class="bloc-logo" style="visibility: visible;">
+          <canvas id="logo-canvas"></canvas>
+          <a href="#home" id="navbar__logo" class="logo-mask">COLORS</a>
+        </div>
+       
         <!-- Navbar hamburger menu button animation using span bars (for mobile devices) -->
         <div class="navbar__toggle" id="mobile-menu">
           <span class="bar"></span>
@@ -45,7 +49,7 @@
     <!-- Hero Section -->
     <div class="hero" id="home">
       <div class="hero__container">
-        <h1 class="hero__heading">Choose your <span>colors</span></h1>
+        <h1 class="hero__heading">Choose your <span class="logo-mask">colors</span></h1>
         <p class="hero__description">The Possibilities are Endless</p>
         <button class="main__btn"><a href="#">Explore</a></button>
       </div>
@@ -165,6 +169,7 @@
       </section>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/granim/2.0.0/granim.min.js" integrity="sha512-CmlPTWm5+a1Gt2YSNk2rGZVvbH3Zge6imS7M4/vrhC8d+A1RcehmLxWMqUdv8aEu7pwfTo74EtnrR+8Cf8KdCA==" crossorigin="anonymous"></script>
     <script src="./app.js"></script>
   </body>
 </html>

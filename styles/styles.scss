@@ -66,24 +66,24 @@ $nav-link-hover-color: #fdbb2d;
   }
 }
 
-#navbar__logo {
-  background-color: $gradient-background-color;
-  background-image: linear-gradient(
-    to top,
-    $primary-gradient-color 0%,
-    $accent-gradient-color 100%
-  );
-  background-size: 100%;
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 2rem;
-}
+// #navbar__logo {
+//   background-color: $gradient-background-color;
+//   background-image: linear-gradient(
+//     to top,
+//     $primary-gradient-color 0%,
+//     $accent-gradient-color 100%
+//   );
+//   background-size: 100%;
+//   -webkit-background-clip: text;
+//   -moz-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   -moz-text-fill-color: transparent;
+//   display: flex;
+//   align-items: center;
+//   cursor: pointer;
+//   text-decoration: none;
+//   font-size: 2rem;
+// }
 
 .button {
   display: flex;
@@ -144,12 +144,8 @@ $nav-link-hover-color: #fdbb2d;
     opacity: 1;
     transition: all 0.5s ease;
     z-index: 99;
-    height: 60vh;
+    height: 100vh;
     font-size: 1.6rem;
-  }
-
-  #navbar__logo {
-    padding-left: 25px;
   }
 
   /* Below we create the hamburger menu */
@@ -825,4 +821,29 @@ $nav-link-hover-color: #fdbb2d;
     padding: 10px;
     width: 100%;
   }
+}
+
+/* Gradient animation on home logo  */
+.bloc-logo {
+  position: relative;
+  width: 180px;
+  height: 80px;
+  margin-top: 10px;
+  float: left;
+}
+
+.bloc-logo canvas,
+.bloc-logo .logo-mask {
+  display: block;
+  width: 210px;
+  height: 60px;
+}
+
+.bloc-logo .logo-mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 210px;
+  background-image: url("../colors-img.png");
+  text-indent: -9999px;
 }
