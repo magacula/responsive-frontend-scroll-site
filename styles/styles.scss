@@ -1,8 +1,9 @@
 @import "config";
 
 /* declaring sass variables */
-$primary-color: #131313;
-$secondary-color: #fff;
+$primary-clr-1: #131313;
+$primary-clr-2: #000000;
+$clr-white: #fff;
 $gradient-background-color: #ff8177;
 $primary-gradient-color: #f12e5f;
 $accent-gradient-color: #ecdf95;
@@ -11,7 +12,7 @@ $nav-link-hover-color: #fdbb2d;
 
 /** Navbar **/
 .navbar {
-  background: $primary-color;
+  background: $primary-clr-1;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -42,7 +43,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 
   &__links {
-    color: $secondary-color;
+    color: $clr-white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,25 +66,6 @@ $nav-link-hover-color: #fdbb2d;
     width: 100%;
   }
 }
-
-// #navbar__logo {
-//   background-color: $gradient-background-color;
-//   background-image: linear-gradient(
-//     to top,
-//     $primary-gradient-color 0%,
-//     $accent-gradient-color 100%
-//   );
-//   background-size: 100%;
-//   -webkit-background-clip: text;
-//   -moz-background-clip: text;
-//   -webkit-text-fill-color: transparent;
-//   -moz-text-fill-color: transparent;
-//   display: flex;
-//   align-items: center;
-//   cursor: pointer;
-//   text-decoration: none;
-//   font-size: 2rem;
-// }
 
 .button {
   display: flex;
@@ -110,7 +92,7 @@ $nav-link-hover-color: #fdbb2d;
     #b21f1f,
     #1a2a6c
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: $secondary-color;
+  color: $clr-white;
 }
 
 @media screen and (max-width: 960px) {
@@ -154,7 +136,7 @@ $nav-link-hover-color: #fdbb2d;
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background: $secondary-color;
+    background: $clr-white;
   }
 
   .navbar__item {
@@ -210,7 +192,7 @@ $nav-link-hover-color: #fdbb2d;
 
 /** Hero Style Section **/
 .hero {
-  background: #000000;
+  background: $primary-clr-2;
   background: linear-gradient(to right, #161616, #000000);
   padding: 200px 0;
 
@@ -229,7 +211,7 @@ $nav-link-hover-color: #fdbb2d;
   &__heading {
     font-size: 100px;
     margin-bottom: 24px;
-    color: $secondary-color;
+    color: $clr-white;
 
     span {
       background: #c0392b; /* fallback for old browsers */
@@ -288,7 +270,7 @@ $nav-link-hover-color: #fdbb2d;
 
 /** About Style Section **/
 .main {
-  background-color: $primary-color;
+  background-color: $primary-clr-1;
   padding: 10rem 0;
 
   &__container {
@@ -304,7 +286,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 
   &__content {
-    color: $secondary-color;
+    color: $clr-white;
     h1 {
       font-size: 2rem;
       width: 100%;
@@ -368,7 +350,7 @@ $nav-link-hover-color: #fdbb2d;
     padding: 20px 60px;
     border: none;
     border-radius: 4px;
-    color: $secondary-color;
+    color: $clr-white;
     margin-top: 2rem;
     position: relative;
     transition: all 0.35s;
@@ -377,7 +359,7 @@ $nav-link-hover-color: #fdbb2d;
     a {
       position: relative;
       z-index: 2;
-      color: $secondary-color;
+      color: $clr-white;
       text-decoration: none;
     }
   }
@@ -396,7 +378,7 @@ $nav-link-hover-color: #fdbb2d;
   }
 
   &__btn:hover {
-    color: $secondary-color;
+    color: $clr-white;
   }
 
   &__btn:hover:after {
@@ -415,7 +397,7 @@ $nav-link-hover-color: #fdbb2d;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $secondary-color;
+    color: $clr-white;
     background: #12c2e9; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
@@ -454,7 +436,7 @@ $nav-link-hover-color: #fdbb2d;
 /* Mobile responsive for About Section */
 @media screen and (max-width: 1100px) {
   .main__container {
-    color: $secondary-color;
+    color: $clr-white;
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -543,7 +525,7 @@ $nav-link-hover-color: #fdbb2d;
 /** Services Style Section **/
 
 .services {
-  background: #000000;
+  background: $primary-clr-2;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -582,8 +564,8 @@ $nav-link-hover-color: #fdbb2d;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: $secondary-color;
-  background-image: $primary-color;
+  color: $clr-white;
+  background-image: $primary-clr-1;
   transition: 0.3s ease-in;
 
   &:hover {
@@ -673,10 +655,10 @@ $nav-link-hover-color: #fdbb2d;
   margin-top: 16px;
 
   button {
-    color: $secondary-color;
+    color: $clr-white;
     padding: 14px 24px;
     border-radius: 4px;
-    background: $primary-color;
+    background: $primary-clr-1;
     font-size: 1rem;
 
     &:hover {
@@ -699,7 +681,7 @@ $nav-link-hover-color: #fdbb2d;
 
 /* Footer Section */
 .footer__container {
-  background-color: #000000;
+  background-color: $primary-clr-2;
   padding: 5rem 0;
   display: flex;
   flex-direction: column;
@@ -746,11 +728,11 @@ $nav-link-hover-color: #fdbb2d;
 
   h2 {
     margin-bottom: 16px;
-    color: $secondary-color;
+    color: $clr-white;
   }
 
   a {
-    color: $secondary-color;
+    color: $clr-white;
     text-decoration: none;
     margin-bottom: 0.5rem;
     transition: 0.3 ease-out;
@@ -763,7 +745,7 @@ $nav-link-hover-color: #fdbb2d;
 }
 
 .social__icon--link {
-  color: $secondary-color;
+  color: $clr-white;
   font-size: 24px;
 }
 
@@ -789,7 +771,7 @@ $nav-link-hover-color: #fdbb2d;
 }
 
 .website__rights {
-  color: $secondary-color;
+  color: $clr-white;
 }
 
 /* For mobile devices */
